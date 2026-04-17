@@ -15,26 +15,25 @@ description: Structured, information-dense output format with coordinate address
 4. **Standard short forms.** Domain abbreviations (auth, config, db, env, req, res, fn, deps) and SI units (k, M, ms, s, min, h). Never invent novel abbreviations.
 5. **Nominalization.** Verb phrases -> noun compounds for concepts; verbal form for actions. "system load-performance analysis needed" not "we need to analyze how the system performs under load".
 
-6. **Polarity flip.** Recast negatives as positive assertions. "does not support concurrent writes" -> "writes sequential".
-7. **Contrast marking.** Express changes as `old -> new`; use `+`/`-`/`~` for additions/removals/modifications. State both states; "pool 100 -> 300" not "pool set to 300".
-8. **Factored enumeration.** Factor shared prefix/suffix; list only deltas. "service handles: auth, authz, profile" not three separate lines.
-9. **Temporal-by-sequence.** Ordering or `->` replaces temporal connectives. "X -> Y -> Z" not "after X, then Y, finally Z".
-10. **Constraint inlining.** Attach type, range, unit after value. "timeout: 30 (int, 1-300, seconds)" not four separate constraint lines.
+6. **Contrast marking.** Express changes as `old -> new`; use `+`/`-`/`~` for additions/removals/modifications. State both states; "pool 100 -> 300" not "pool set to 300".
+7. **Factored enumeration.** Factor shared prefix/suffix; list only deltas. "service handles: auth, authz, profile" not three separate lines.
+8. **Temporal-by-sequence.** Ordering or `->` replaces temporal connectives. "X -> Y -> Z" not "after X, then Y, finally Z".
+9. **Constraint inlining.** Attach type, range, unit after value. "timeout: 30 (int, 1-300, seconds)" not four separate constraint lines.
 
-11. **Quantify or omit.** Replace vague quantifiers ("several", "significant") with values or ranges; omit intensifiers ("very", "basically", "actually"). IF magnitude matters, use number.
-12. **Confidence tags over hedge words.** Uncertainty via `[confirmed]`/`[likely]`/`[plausible]`/`[speculative]`. Delete "it's worth noting", "potentially", "I think".
-13. **Consistency.** First term for concept = canonical; no synonym-swapping; no filler.
+10. **Quantify or omit.** Replace vague quantifiers ("several", "significant") with values or ranges; omit intensifiers ("very", "basically", "actually"). IF magnitude matters, use number.
+11. **Confidence tags over hedge words.** Uncertainty via `[confirmed]`/`[likely]`/`[plausible]`/`[speculative]`. Delete "it's worth noting", "potentially", "I think".
+12. **Consistency.** First term for concept = canonical; no synonym-swapping; no filler.
 
-14. **Result-first.** Lead with output/conclusion, then conditions.
-15. **Front-loaded keywords.** Start each line with distinguishing keyword, name, number, or status. Scanning reads left edge only.
-16. **Categorical prefixes.** Mark line role with short prefix when section mixes types: `cause:`, `fix:`, `risk:`, `dep:`, `config:`.
-17. **Scope-then-statement.** Prefix with `#scope` tag; eliminates "regarding", "with respect to". "#perf p99 340ms" not "with respect to performance, the p99 is 340ms".
-18. **Presupposition loading.** "given", "assuming", "with", "after" embed preconditions inline.
-19. **Parallel structure.** State pattern once, vary only delta. "validate: email, name, phone".
-20. **Semicolon stacking.** Related facts on one line; semicolon-separated; max 3 clauses, beyond 3 split.
+13. **Result-first.** Lead with output/conclusion, then conditions.
+14. **Front-loaded keywords.** Start each line with distinguishing keyword, name, number, or status. Scanning reads left edge only.
+15. **Categorical prefixes.** Mark line role with short prefix when section mixes types: `cause:`, `fix:`, `risk:`, `dep:`, `config:`.
+16. **Scope-then-statement.** Prefix with `#scope` tag; eliminates "regarding", "with respect to". "#perf p99 340ms" not "with respect to performance, the p99 is 340ms".
+17. **Presupposition loading.** "given", "assuming", "with", "after" embed preconditions inline.
+18. **Parallel structure.** State pattern once, vary only delta. "validate: email, name, phone".
+19. **Semicolon stacking.** Related facts on one line; semicolon-separated; max 3 clauses, beyond 3 split.
 
-21. **Clarity over brevity.** IF compressed form ambiguous THEN expand.
-22. **No em dashes or double hyphens.** Use semicolons, commas, or parentheses.
+20. **Clarity over brevity.** IF compressed form ambiguous THEN expand.
+21. **No em dashes or double hyphens.** Use semicolons, commas, or parentheses.
 
 ## 1.2 Coordinates
 1. Each response = message; auto-incrementing number from 1. User messages unnumbered. Every heading includes concise noun phrase.
