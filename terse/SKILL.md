@@ -66,33 +66,33 @@ description: Structured, information-dense output format with coordinate address
 
 ## 1.6 Notation
 1.
-| Syntax | Meaning |
-|--------|---------|
-| `->` `<-` `<->` | flow; derivation; bidirectional |
-| `=>` `<=>` | implies; iff |
-| `(...)` | metadata, context |
-| `AND` `OR` | conjunction; disjunction |
-| `ALL` `ANY` `NONE` | universal; existential; empty |
-| `IF`/`THEN`/`ELSE` | branching; 1-2 paths |
-| `MATCH`/`CASE` | branching; 3+ paths |
-| `IN` `NOT-IN` | membership |
-| `MUST` `SHOULD` `MAY` | obligation (required > recommended > optional) |
-| `=` `!=` `~=` | equals; not equal; approximate |
-| `>` `<` `>=` `<=` | comparison |
-| `+` | add, include, concatenate |
-| `-` | remove, exclude, without |
-| `~` | approximate |
-| `△` | diff, change |
-| `?` | optionality |
-| `/` | paired values; ratio; related alternatives |
-| `x...` | repeatable element |
-| `{a, b, c}` | unordered set |
-| `[a, b, c]` | ordered sequence |
-| `a \| b \| c` | alternatives |
-| `#scope` | domain scope |
+| Syntax                                                 | Meaning |
+|--------------------------------------------------------|---------|
+| `->` `<-` `<->`                                        | flow; derivation; bidirectional |
+| `=>` `<=>`                                             | implies; iff |
+| `(...)`                                                | metadata, context |
+| `AND` `OR`                                             | conjunction; disjunction |
+| `ALL` `ANY` `NONE`                                     | universal; existential; empty |
+| `IF`/`THEN`/`ELSE`                                     | branching; 1-2 paths |
+| `MATCH`/`CASE`                                         | branching; 3+ paths |
+| `IN` `NOT-IN`                                          | membership |
+| `MUST` `SHOULD` `MAY`                                  | obligation (required > recommended > optional) |
+| `=` `!=` `~=`                                          | equals; not equal; approximate |
+| `>` `<` `>=` `<=`                                      | comparison |
+| `+`                                                    | add, include, concatenate |
+| `-`                                                    | remove, exclude, without |
+| `~`                                                    | approximate |
+| `△`                                                    | diff, change |
+| `?`                                                    | optionality |
+| `/`                                                    | paired values; ratio; related alternatives |
+| `x...`                                                 | repeatable element |
+| `{a, b, c}`                                            | unordered set |
+| `[a, b, c]`                                            | ordered sequence |
+| `a \| b \| c`                                          | alternatives |
+| `#scope`                                               | domain scope |
 | `[confirmed]` `[likely]` `[plausible]` `[speculative]` | confidence (verified > strong > reasonable > low) |
-| `[important]` `[note]` `[question]` `[action]` `...` | immediate user attention |
-| `[open]` `[wip]` `[done]` `[blocked]` | pending; in progress; resolved; blocked |
+| `[IMPORTANT]` `[NOTE]` `[QUESTION]` `[ACTION]` `...`   | immediate user attention |
+| `[open]` `[wip]` `[done]` `[blocked]`                  | pending; in progress; resolved; blocked |
 
 ## 1.7 Examples
 1.
