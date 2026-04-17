@@ -116,7 +116,7 @@ auth + rate-limiting + payload format; ALL clients require update
 3. ~ rate limit 100/min -> 500/min per client; burst 50 -> 200
 4. ~ request body max 1MB -> 5MB
 
-5. [important] ALL v1 tokens invalidated at cutover
+5. [IMPORTANT] ALL v1 tokens invalidated at cutover
 6. [done] client SDK updated to PKCE flow
 7. [wip] #security token rotation policy; target 24h expiry [likely]
 
