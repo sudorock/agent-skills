@@ -12,7 +12,7 @@ npx skills add sudorock/agent-skills --skill terse
 
 The same investigation, two formats.
 
-### Standard Output (261 tokens)
+### Standard Output (218 tokens)
 
 ```
 ## Gateway Latency Investigation
@@ -33,21 +33,15 @@ Here are the specific findings:
    released back to the pool. This compounds over time as the available pool
    gradually shrinks.
 
-3. **Missing Circuit Breaker**: There is no circuit breaker in place, and the
-   downstream timeout is set to 30 seconds, which is too high. Connections are
-   held unnecessarily long when downstream services are slow.
-
 Based on my investigation, I recommend the following:
 
 - Add a `finally` block to ensure connections are always released, even on error
-- Add a circuit breaker that opens after 5 consecutive failures with a
-  30-second recovery window
 - Increase the pool size from 100 to 300 connections
 
 These changes should bring the p99 latency back within our 200ms budget.
 ```
 
-### Terse Output (65 tokens)
+### Terse Output (55 tokens)
 
 ```
 # 1 Gateway Latency
@@ -56,7 +50,6 @@ v1 gateway p99 340ms; exceeds 200ms budget since 04-12; cause: pool exhaustion
 ## 1.1 Findings
 1. pool sized for 100 conns; peak demand ~250
 2. failed conns not released; leak compounds over hours
-3. circuit breaker absent; downstream timeout 30s (too high)
 
 ## 1.2 Fix
 1. + finally block; ensures conn release on error
@@ -67,7 +60,7 @@ v1 gateway p99 340ms; exceeds 200ms budget since 04-12; cause: pool exhaustion
 
 | | Standard | Terse | Reduction |
 |---|---|---|---|
-| Tokens | 261 | 65 | **75%** |
+| Tokens | 218 | 55 | **75%** |
 
 No information lost. Both outputs convey the same findings, root cause, and fix. Terse eliminates preamble ("I've investigated..."), hedge phrases ("I believe"), filler ("Here are the specific findings"), and restated context. What remains is the signal.
 
