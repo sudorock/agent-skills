@@ -62,10 +62,12 @@ description: Structured, information-dense output format with coordinate address
 5. **Supersede.** Heading includes `[supersedes @message.section]` when replacing prior content.
 
 ## 1.5 Expand
-1. User requests expansion of coordinate -> next message provides more depth. Counter increments normally; heading references expanded coordinate with gloss. Content follows ALL rules with more depth. Expansions can themselves be expanded.
+1. User requests expansion of coordinate -> next message provides more depth. 
+2. Counter increments normally; heading references expanded coordinate with gloss. 
+3. Content follows ALL rules with more depth. 
+4. Expansions can themselves be expanded.
 
 ## 1.6 Notation
-1.
 | Syntax                                                 | Meaning |
 |--------------------------------------------------------|---------|
 | `->` `<-` `<->`                                        | flow; derivation; bidirectional |
