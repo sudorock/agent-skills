@@ -10,30 +10,27 @@ description: Structured, information-dense output format with coordinate address
 ## 1.1 Writing Discipline
 
 1. **Telegraphic deletion.** Drop articles, copulas, fillers when meaning preserved. "configure system -> new endpoint" not "configure the system to use the new endpoint".
-2. **Comma-for-and.** Replace "and" with comma in enumerations. "cache, database, gateway" not "cache and database and gateway".
+2. **Nominalization.** Verb phrases -> noun compounds for concepts; verbal form for actions. "system load-performance analysis needed" not "we need to analyze how the system performs under load".
 3. **Active verb, minimal form.** "X fails" not "X is failing"; "logs show" not "looking at the logs we can see". Delete participial preambles ("considering", "regarding", "looking at").
-4. **Standard short forms.** Domain abbreviations (auth, config, db, env, req, res, fn, deps) and SI units (k, M, ms, s, min, h). Never invent novel abbreviations.
-5. **Nominalization.** Verb phrases -> noun compounds for concepts; verbal form for actions. "system load-performance analysis needed" not "we need to analyze how the system performs under load".
+4. **Semicolon stacking.** Related facts on one line; semicolon-separated; max 3 clauses, beyond 3 split.
+5. **Consistency.** First term for concept = canonical; no synonym-swapping; no filler.
+6. **Result-first.** Lead with output/conclusion, then conditions.
+7. **Front-loaded keywords.** Start each line with distinguishing keyword, name, number, or status. Scanning reads left edge only.
+8. **Comma-for-and.** Replace "and" with comma in enumerations. "cache, database, gateway" not "cache and database and gateway".
+9. **Quantify** Replace vague quantifiers ("several", "significant") with values or ranges when possible.
+10. **Temporal-by-sequence.** Ordering or `->` replaces temporal connectives. "X -> Y -> Z" not "after X, then Y, finally Z".
+11. **Standard short forms.** Domain abbreviations (auth, config, db, env, req, res, fn, deps) and SI units (k, M, ms, s, min, h). Never invent novel abbreviations.
+12. **Presupposition loading.** "given", "assuming", "with", "after" embed preconditions inline.
+13. **Parallel structure.** State pattern once, vary only delta. "validate: email, name, phone".
+14. **Contrast marking.** Express changes as `old -> new`; use `+`/`-`/`~` for additions/removals/modifications. State both states; "pool 100 -> 300" not "pool set to 300".
+15. **Factored enumeration.** Factor shared prefix/suffix; list only deltas. "service handles: auth, authz, profile" not three separate lines.
+16. **Confidence tags over hedge words.** Uncertainty via `[confirmed]`/`[likely]`/`[plausible]`/`[speculative]`. Delete "it's worth noting", "potentially", "I think".
+17. **Categorical prefixes.** Mark line role with short prefix when section mixes types: `cause:`, `fix:`, `risk:`, `dep:`, `config:`.
+18. **Scope-then-statement.** Prefix with `#scope` tag; eliminates "regarding", "with respect to". "#perf p99 340ms" not "with respect to performance, the p99 is 340ms".
+19. **Constraint inlining.** Attach type, range, unit after value. "timeout: 30 (int, 1-300, seconds)" not four separate constraint lines.
+20. **No em dashes or double hyphens.** Use semicolons, commas, or parentheses.
 
-6. **Contrast marking.** Express changes as `old -> new`; use `+`/`-`/`~` for additions/removals/modifications. State both states; "pool 100 -> 300" not "pool set to 300".
-7. **Factored enumeration.** Factor shared prefix/suffix; list only deltas. "service handles: auth, authz, profile" not three separate lines.
-8. **Temporal-by-sequence.** Ordering or `->` replaces temporal connectives. "X -> Y -> Z" not "after X, then Y, finally Z".
-9. **Constraint inlining.** Attach type, range, unit after value. "timeout: 30 (int, 1-300, seconds)" not four separate constraint lines.
-
-10. **Quantify or omit.** Replace vague quantifiers ("several", "significant") with values or ranges; omit intensifiers ("very", "basically", "actually"). IF magnitude matters, use number.
-11. **Confidence tags over hedge words.** Uncertainty via `[confirmed]`/`[likely]`/`[plausible]`/`[speculative]`. Delete "it's worth noting", "potentially", "I think".
-12. **Consistency.** First term for concept = canonical; no synonym-swapping; no filler.
-
-13. **Result-first.** Lead with output/conclusion, then conditions.
-14. **Front-loaded keywords.** Start each line with distinguishing keyword, name, number, or status. Scanning reads left edge only.
-15. **Categorical prefixes.** Mark line role with short prefix when section mixes types: `cause:`, `fix:`, `risk:`, `dep:`, `config:`.
-16. **Scope-then-statement.** Prefix with `#scope` tag; eliminates "regarding", "with respect to". "#perf p99 340ms" not "with respect to performance, the p99 is 340ms".
-17. **Presupposition loading.** "given", "assuming", "with", "after" embed preconditions inline.
-18. **Parallel structure.** State pattern once, vary only delta. "validate: email, name, phone".
-19. **Semicolon stacking.** Related facts on one line; semicolon-separated; max 3 clauses, beyond 3 split.
-
-20. **Clarity over brevity.** IF compressed form ambiguous THEN expand.
-21. **No em dashes or double hyphens.** Use semicolons, commas, or parentheses.
+**Clarity over brevity.** IF compressed form ambiguous THEN expand.
 
 ## 1.2 Coordinates
 1. Each response = message; auto-incrementing number from 1. User messages unnumbered. Every heading includes concise noun phrase.
