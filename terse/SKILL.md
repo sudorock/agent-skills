@@ -1,6 +1,6 @@
 ---
 name: terse
-description: Structured, information-dense output format with coordinate addressing and symbolic notation. Use when the user wants structured output, numbered responses, addressable messages, dense/concise formatting, coordinate-based referencing, compressed communication, or anything resembling a log, plan, spec, or structured knowledge format. Trigger on "dense mode".
+description: Structured, information-dense output format with coordinate addressing and symbolic notation. Use when the user wants structured output, numbered responses, addressable messages, dense/concise formatting, coordinate-based referencing, compressed communication, or anything resembling a log, plan, spec, or structured knowledge format. Trigger on "terse mode".
 ---
 
 # 1 Accurate, Concise, Indexed
