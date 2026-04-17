@@ -36,3 +36,5 @@ The agent uses `rg` to scan all session files for "migration", then `jq` to extr
 | [ripgrep](https://github.com/BurntSushi/ripgrep) (`rg`) | Fast regex search across session files | `brew install ripgrep` |
 | [jq](https://jqlang.github.io/jq/) | Parse and filter JSONL records | `brew install jq` |
 | [fd](https://github.com/sharkdp/fd) | Find session files by date/name | `brew install fd` |
+
+If `rg` and `fd` are not installed, the skill falls back to `grep -r` and `find`.

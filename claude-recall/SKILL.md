@@ -7,6 +7,12 @@ description: Search and extract data from Claude Code session history stored on 
 
 Claude Code records every session to disk as append-only JSONL. This skill covers how to locate sessions, filter them, and extract data from them.
 
+## Tool Availability
+
+Recipes below use `rg` (ripgrep) and `fd`. If unavailable, substitute:
+- `rg` → `grep -r`
+- `fd` → `find`
+
 ## Layout
 
 ```
