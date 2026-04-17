@@ -1,0 +1,4 @@
+interface:
+  display_name: "Terse"
+  short_description: "Coordinate-addressed, information-dense output format"
+  default_prompt: "Use $terse for structured, dense, referenceable output."
