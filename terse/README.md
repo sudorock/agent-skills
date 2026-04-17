@@ -45,7 +45,7 @@ These changes should bring the p99 latency back within our 200ms budget.
 
 ```
 # 1 Gateway Latency
-v1 gateway p99 340ms; exceeds 200ms budget since 04-12; cause: pool exhaustion
+v1 gateway p99 340ms; exceeds 200ms budget since April 12; cause: pool exhaustion
 
 ## 1.1 Findings
 1. pool sized for 100 conns; peak demand ~250
