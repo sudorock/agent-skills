@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude Recall"
+  short_description: "Search Claude Code session history on disk"
+  default_prompt: "Use $claude-recall to find past conversations, prompts, tool invocations, or recover file versions from any Claude Code session on disk."

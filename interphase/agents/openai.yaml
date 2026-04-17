@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interphase"
+  short_description: "Help with React state using Interphase"
+  default_prompt: "Use $interphase to build a typed React store with sync and async subscriptions using Clojure-style namespace/name IDs in @aktopia/interphase."

@@ -20,7 +20,10 @@ npx skills add sudorock/agent-skills --skill terse
 
 | Skill | Description |
 |---|---|
-| [terse](terse/) | Structured, information-dense output with coordinate addressing. ~75% token reduction without information loss. Every line gets a stable address for referencing, expanding, and superseding. |
+| [terse](terse/) | Structured, information-dense output with coordinate addressing. ~75% token reduction without information loss. |
+| [claude-recall](claude-recall/) | Search and extract data from Claude Code session history on disk. Find past conversations, recover prompts, audit tool calls, or restore file versions. |
+| [pulumi-aws-naming](pulumi-aws-naming/) | Consistent naming conventions for Pulumi-managed AWS resources. Logical and physical names, resource type abbreviations, formatting exceptions. |
+| [interphase](interphase/) | Reactive state management for React with `@aktopia/interphase`. Subscriptions, events, and hooks built on Zustand, TanStack Query, and Immer. |
 
 ## License
 

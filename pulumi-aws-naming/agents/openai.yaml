@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pulumi AWS Naming"
+  short_description: "Apply Pulumi AWS naming conventions"
+  default_prompt: "Use $pulumi-aws-naming to name these Pulumi-managed AWS resources consistently."
