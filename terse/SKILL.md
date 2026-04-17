@@ -95,7 +95,7 @@ description: Structured, information-dense output format with coordinate address
 | `[open]` `[wip]` `[done]` `[blocked]`                  | pending; in progress; resolved; blocked |
 
 ## 1.7 Examples
-1.
+
 ```
 # 1 Gateway Health Check
 v1 gateway p99 latency 340ms; exceeds 200ms budget since 04-12
@@ -145,12 +145,12 @@ pool leak patched; p99 340ms -> 145ms
 4. rollback via @3.3 (canary-rollout) if regression [likely]
 ```
 
-2.
+
 ```
 user: expand @3.3
 ```
 
-3.
+
 ```
 # 5 @3.3 Rollout Strategy
 phased canary -> percentage ramp; automated promotion gates
