@@ -1,16 +1,8 @@
 # agent-skills
 
-Agent skills for Claude Code, Codex, and other AI coding agents.
+A personal assorted collection of agent skills. Pick and choose what's useful to you.
 
 ## Install
-
-All skills:
-
-```
-npx skills add sudorock/agent-skills
-```
-
-Single skill:
 
 ```
 npx skills add sudorock/agent-skills --skill terse
