@@ -88,7 +88,7 @@ rg -l --no-messages -i "<pattern>" "$ROOT"
 slug is lossy; use `cwd` field:
 
 ```bash
-CWD=/Users/indy/dev/nanyar
+CWD=/path/to/your/project
 fd -e jsonl . "$ROOT" -d 2 | while read f; do
   head -20 "$f" | jq -rc --arg cwd "$CWD" \
     'select(.cwd == $cwd) | [.timestamp, input_filename] | @tsv' 2>/dev/null | head -1
